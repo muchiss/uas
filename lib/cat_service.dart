@@ -6,7 +6,7 @@ class CatService {
   static Future<List<Cat>> fetchCat() async {
     Dio dio = Dio();
 
-    var response = await dio.get('http://localhost:3000/cat');
+    var response = await dio.get('http://localhost:3004/cat');
 
     // print(response.data);
     List<Cat> cat =

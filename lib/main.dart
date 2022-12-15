@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wicat/home_cat.dart';
+import 'package:wicat/login_page.dart';
 import 'package:wicat/onboarding_page.dart';
 
 void main(List<String> args) {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner:
           false, //untuk menghilangkan banner debug diatas
       theme: ThemeData(fontFamily: 'Times New Roman'),
-      home: OnboardingPage(), //menjalankan class pertama kali
+      home: Login(), //menjalankan class pertama kali
     );
   }
 }
