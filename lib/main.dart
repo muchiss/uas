@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner:
           false, //untuk menghilangkan banner debug diatas
-      theme: ThemeData(fontFamily: 'Times New Roman'),
-      home: Login(), //menjalankan class pertama kali
+      theme: ThemeData(),
+      home: Home_page(), //menjalankan class pertama kali
     );
   }
 }

@@ -19,27 +19,22 @@ class _LoginState extends State<Login> {
 
   void login(String email, password) async {
     try {
-      // ME-GET atau Mengambil data json dari link
-      var response = await Dio().get('http://localhost:3004/user');
-      // inisialisasi panjang data
-      var panjang_data = response.data.length;
-      if (response.statusCode == 200) {
-        // pengecekan dengan perulangan dan percabangan,
-        // input akan dicek dari semua data yg sudah ada di json
-        for (var i = 0; i <= panjang_data; i++) {
-          if (email == response.data[i]['email'] &&
-              password == response.data[i]['password']) {
-            print("Login success");
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Home_page()));
-            break;
-          }
-        }
+      var response = await Dio()
+          .get('http://localhost:3004/api/user/' + email + '/' + password);
+      if (response.data.length > 0) {
+        int id = response.data[0]['id'];
+        String name = response.data[0]['name'];
+        String email = response.data[0]['email'];
+        String password = response.data[0]['password'];
+
+        print("Login success");
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Home_page()));
       } else {
         final snackBar = SnackBar(
           backgroundColor: Colors.redAccent,
           content: Text(
-            'Login failed',
+            'Invalid email or password',
             style: TextStyle(
               fontFamily: 'Poppins-Regular',
               color: Colors.white,
@@ -52,8 +47,7 @@ class _LoginState extends State<Login> {
       final snackBar = SnackBar(
         backgroundColor: Colors.redAccent,
         content: Text(
-          'Login Failed',
-          // e.toString(),
+          e.toString(),
           style: TextStyle(
             fontFamily: 'Poppins-Regular',
             color: Colors.white,

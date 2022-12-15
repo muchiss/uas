@@ -16,7 +16,7 @@ class Detailcat extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         // backgroundColor: Color.fromARGB(255, 158, 43, 43),
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.deepOrange,
         elevation: 0,
         leading: IconButton(
           icon: new Icon(Icons.arrow_back_ios_new_rounded),
@@ -32,7 +32,7 @@ class Detailcat extends StatelessWidget {
           textAlign: TextAlign.center,
           style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Colors.deepOrange,
+              color: Colors.white,
               fontFamily: 'Poppins'),
         ),
         actions: [

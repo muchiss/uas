@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wicat/cat_service.dart';
 import 'package:wicat/detail_cat.dart';
+import 'package:wicat/login_page.dart';
 
 import 'model/model_cat.dart';
 import 'onboarding_page.dart';
@@ -18,7 +19,7 @@ class _Home_pageState extends State<Home_page> {
     return Scaffold(
       appBar: AppBar(
         // backgroundColor: Color.fromARGB(255, 158, 43, 43),
-        backgroundColor: Color.fromARGB(255, 233, 233, 233),
+        backgroundColor: Colors.deepOrange,
         elevation: 0,
         leading: IconButton(
           icon: new Icon(Icons.arrow_back_ios_new_rounded),
@@ -26,7 +27,7 @@ class _Home_pageState extends State<Home_page> {
           onPressed: () {
             print('back');
             Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Home_page()));
+                context, MaterialPageRoute(builder: (context) => Login()));
           },
         ),
         centerTitle: true,
@@ -35,7 +36,7 @@ class _Home_pageState extends State<Home_page> {
           textAlign: TextAlign.center,
           style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Colors.deepOrange,
+              color: Colors.white,
               fontFamily: 'Poppins'),
         ),
         actions: [
@@ -58,7 +59,8 @@ class _Home_pageState extends State<Home_page> {
             children: [
               Text(
                 'Welcome back!',
-                style: TextStyle(fontSize: 16, color: Colors.grey),
+                style: TextStyle(
+                    fontSize: 16, color: Color.fromARGB(255, 27, 27, 27)),
               ),
               SizedBox(
                 height: 8,
@@ -72,7 +74,7 @@ class _Home_pageState extends State<Home_page> {
               ),
               Container(
                 decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 241, 241, 241),
+                    color: Color.fromARGB(255, 151, 144, 144),
                     borderRadius: BorderRadius.circular(12)),
               ),
               SizedBox(
@@ -138,7 +140,7 @@ class _Home_pageState extends State<Home_page> {
                                             children: [
                                               Text(snapshot.data![index].name,
                                                   style: TextStyle(
-                                                      fontSize: 18,
+                                                      fontSize: 30,
                                                       fontWeight:
                                                           FontWeight.bold)),
                                               SizedBox(
