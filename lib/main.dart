@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner:
           false, //untuk menghilangkan banner debug diatas
       theme: ThemeData(),
-      home: Home_page(), //menjalankan class pertama kali
+      home: Login(), //menjalankan class pertama kali
     );
   }
 }

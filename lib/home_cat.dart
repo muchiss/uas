@@ -52,6 +52,10 @@ class _Home_pageState extends State<Home_page> {
         ],
       ),
       body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: NetworkImage(
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkphAy8NuQgtXLWZViER1ngGGAMkbW7lxMkg&usqp=CAU"))),
         margin: EdgeInsets.only(top: 10.0, left: 16.0, right: 16.0),
         child: SingleChildScrollView(
           child: Column(
@@ -60,7 +64,7 @@ class _Home_pageState extends State<Home_page> {
               Text(
                 'Welcome back!',
                 style: TextStyle(
-                    fontSize: 16, color: Color.fromARGB(255, 27, 27, 27)),
+                    fontSize: 18, color: Color.fromARGB(255, 27, 27, 27)),
               ),
               SizedBox(
                 height: 8,
@@ -112,6 +116,7 @@ class _Home_pageState extends State<Home_page> {
                                             )));
                               },
                               child: Card(
+                                color: Color.fromARGB(255, 250, 134, 98),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(20)),
                                 child: Container(

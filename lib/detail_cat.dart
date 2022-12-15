@@ -90,7 +90,7 @@ class Detailcat extends StatelessWidget {
                       datacat.description,
                       style: TextStyle(
                           fontSize: 14,
-                          color: Colors.grey,
+                          color: Color.fromARGB(255, 0, 0, 0),
                           fontWeight: FontWeight.normal,
                           letterSpacing: 0.5,
                           wordSpacing: 1.5),
@@ -105,18 +105,6 @@ class Detailcat extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [],
                         ),
-                        ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                              padding: EdgeInsets.fromLTRB(35, 10, 35, 10),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10.0)),
-                              primary: Colors.deepOrange),
-                          child: Text(
-                            'Baca',
-                            style: TextStyle(color: Colors.white, fontSize: 18),
-                          ),
-                        )
                       ],
                     )
                   ],
