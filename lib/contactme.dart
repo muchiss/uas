@@ -16,7 +16,11 @@ class Contactme extends StatelessWidget {
         padding: EdgeInsets.all(20),
         child: Column(
           children: [
-            Image.asset('img/contact.png'),
+            Text(
+              'Perkenalkan, nama saya Muchiss',
+              style: TextStyle(
+                  fontSize: 18, color: Color.fromARGB(255, 27, 27, 27)),
+            ),
           ],
         ),
       ),

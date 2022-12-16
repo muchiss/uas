@@ -176,7 +176,7 @@ class _Home_pageState extends State<Home_page> {
                   radius: 40.0,
                   backgroundColor: Colors.white,
                   child: new Image.asset(
-                    'img/logokedua.png',
+                    'img/wicat2.png',
                   ),
                 ),
                 SizedBox(
