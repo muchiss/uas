@@ -17,7 +17,7 @@ class _RegisterState extends State<Register> {
   void register(String name, email, password) async {
     try {
       // ME-POST atau MENAMBAH data json dari link
-      var response = await Dio().post('http://localhost:3000/user',
+      var response = await Dio().post('http://localhost:3004/user',
           data: {"name": name, "email": email, "password": password});
       if (response.statusCode == 201) {
         // status code 201 karena berhasil membuat data baru
