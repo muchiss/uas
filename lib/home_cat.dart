@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wicat/cat_service.dart';
+import 'package:wicat/contactme.dart';
 import 'package:wicat/detail_cat.dart';
 import 'package:wicat/login_page.dart';
 
@@ -21,15 +22,7 @@ class _Home_pageState extends State<Home_page> {
         // backgroundColor: Color.fromARGB(255, 158, 43, 43),
         backgroundColor: Colors.deepOrange,
         elevation: 0,
-        leading: IconButton(
-          icon: new Icon(Icons.arrow_back_ios_new_rounded),
-          color: Colors.black,
-          onPressed: () {
-            print('back');
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Login()));
-          },
-        ),
+
         centerTitle: true,
         title: Text(
           'WiCat',
@@ -169,6 +162,48 @@ class _Home_pageState extends State<Home_page> {
           ),
         ),
       ),
+      drawer: Drawer(
+          child: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          new DrawerHeader(
+            decoration: BoxDecoration(
+              color: Colors.deepOrangeAccent,
+            ),
+            child: new Column(
+              children: [
+                CircleAvatar(
+                  radius: 40.0,
+                  backgroundColor: Colors.white,
+                  child: new Image.asset(
+                    'img/logokedua.png',
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'CATLOVERS',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          ListTile(
+            leading: Icon(Icons.contact_support_outlined),
+            title: new Text('Contact us'),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Contactme()));
+            },
+          ),
+        ],
+      )),
     );
   }
 }
